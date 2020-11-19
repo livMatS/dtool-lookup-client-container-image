@@ -6,7 +6,7 @@ RUN apt-get --yes update && \
     apt-get --no-install-recommends --yes install git smbclient && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install dtool dtool-smb dtool-lookup-api git+https://github.com/IMTEK-Simulation/dtool-lookup-client@master
+RUN pip install PyYAML dtool dtool-smb dtool-lookup-api git+https://github.com/IMTEK-Simulation/dtool-lookup-client@master
 #
 # Prepare application code
 #
