@@ -133,7 +133,7 @@ jobs:
       run: |        
         cd dtool-lookup-server-container-composition
 
-        docker-compose -p dtool-lookup-server-container-composition up -d --no-build  # will pull missing images with build command in compose file
+        docker-compose -p dtool-lookup-server-container-composition up -d 
 
         sleep 10
        
