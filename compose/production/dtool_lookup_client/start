@@ -8,4 +8,15 @@ smbclient -U guest -c "mkdir dtool" -N -W WORKGROUP //sambaserver/sambashare
 # place test dataset on share
 dtool cp /share/dtool/simple_test_dataset smb://test-share
 dtool cp /share/dtool/simple_test_dataset s3://test-bucket
-exit $?
+# TODO: failure may mean the dataset exists already or no connection to the server
+
+# check connectivity for return code
+dtool ls smb://test-share
+ret_smb=$?
+dtool ls s3://test-bucket
+ret_s3=$?
+if [ ${ret_smb} -ne 0 ]; then
+  exit ${ret_smb}
+else
+  exit ${ret_s3}
+fi
