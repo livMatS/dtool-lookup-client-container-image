@@ -81,6 +81,32 @@ jobs:
         dtool-lookup-server-container-composition-version: [0.2.0]
 
     steps:
+    
+    # deactivated docker buildx here due to
+    # * https://github.com/docker/compose/issues/8494
+    # * https://github.com/docker/compose/issues/8590 
+    # otherwise, the line
+    #    docker-compose -p dtool-lookup-server-container-composition up -d 
+    # below will fail with
+    #   [2394] Failed to execute script docker-compose
+    #   Traceback (most recent call last):
+    #     File "docker-compose", line 3, in <module>
+    #     File "compose/cli/main.py", line 81, in main
+    #     File "compose/cli/main.py", line 203, in perform_command
+    #     File "compose/metrics/decorator.py", line 18, in wrapper
+    #     File "compose/cli/main.py", line 1186, in up
+    #     File "compose/cli/main.py", line 1182, in up
+    #     File "compose/project.py", line 664, in up
+    #     File "compose/service.py", line 364, in ensure_image_exists
+    #     File "compose/service.py", line 1133, in build
+    #     File "compose/service.py", line 1950, in build
+    #   IndexError: list index out of range
+    #   Error: Process completed with exit code 255.
+    #
+    # - name: Set up docker buildx
+    #   uses: docker/setup-buildx-action@v1
+    #   with:
+    #     install: true
 
     - name: Download artifact
       uses: actions/download-artifact@v2
