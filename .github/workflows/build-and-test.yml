@@ -194,7 +194,7 @@ jobs:
         docker-compose exec -T dtool_lookup_server /refresh_index
 
         echo "dtool query '{}'"
-        docker-compose run dtool_lookup_client dtool query '{}'
+        docker-compose run dtool_lookup_client query '{}'
 
         # cd ..
         # sleep 10
