@@ -179,10 +179,10 @@ jobs:
 
         # place test datasets on storage infrastructure
         echo "dtool cp tests/dtool/simple_test_dataset smb://test-share"
-        docker-compose run -v tests:/tests dtool_lookup_client cp /tests/dtool/simple_test_dataset smb://test-share
+        docker-compose run -v $(pwd)/tests:/tests dtool_lookup_client cp /tests/dtool/simple_test_dataset smb://test-share
 
         echo "dtool cp tests/dtool/simple_test_dataset s3://test-bucket"
-        docker-compose run -v tests:/tests dtool_lookup_client cp /tests/dtool/simple_test_dataset s3://test-bucket
+        docker-compose run -v $(pwd)/tests:/tests dtool_lookup_client cp /tests/dtool/simple_test_dataset s3://test-bucket
 
         echo "dtool ls smb://test-share"
         docker-compose run dtool_lookup_client ls smb://test-share
