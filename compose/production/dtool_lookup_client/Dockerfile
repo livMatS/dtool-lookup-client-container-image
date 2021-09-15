@@ -5,10 +5,7 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /app
 RUN mkdir -p /root/.config/dtool
 
-COPY tests/dtool /share/dtool
 COPY dtool/dtool.json /root/.config/dtool
-
-COPY compose/production/dtool_lookup_client/start /start
 
 RUN sed -i 's/\r//' /start
 RUN chmod +x /start
@@ -18,4 +15,7 @@ RUN apt-get --yes update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY compose/production/dtool_lookup_client/requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
+
+ENTRYPOINT ["/usr/local/bin/dtool"]
+CMD ["--help"]
