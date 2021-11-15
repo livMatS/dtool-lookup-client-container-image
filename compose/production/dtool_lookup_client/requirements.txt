@@ -59,17 +59,17 @@ dtool-config==0.4.1
     #   dtool-lookup-client
 dtool-create==0.23.4
     # via dtool
-dtool_http==0.5.1
+dtool-http==0.5.1
     # via
     #   dtool
     #   dtool-create
 dtool-info==0.16.2
     # via dtool
-dtool-lookup-api==0.1.1
+dtool-lookup-api==0.2.0
     # via
     #   -r requirements.in
     #   dtool-lookup-client
-git+https://github.com/IMTEK-Simulation/dtool-lookup-client@master#egg=dtool-lookup-client
+dtool-lookup-client @ git+https://github.com/IMTEK-Simulation/dtool-lookup-client@master
     # via -r requirements.in
 dtool-overlay==0.3.1
     # via dtool
@@ -137,8 +137,6 @@ requests==2.26.0
     #   dtool-lookup-client
 ruamel.yaml==0.17.16
     # via dtool-create
-ruamel.yaml.clib==0.2.6
-    # via ruamel.yaml
 s3transfer==0.5.0
     # via boto3
 six==1.16.0
