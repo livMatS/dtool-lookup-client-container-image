@@ -4,29 +4,31 @@
 #
 #    pip-compile requirements.in
 #
-aiohttp==3.7.4.post0
+aiohttp==3.8.1
     # via dtool-lookup-api
-asgiref==3.4.1
+aiosignal==1.2.0
+    # via aiohttp
+asgiref==3.5.0
     # via
     #   dtool-lookup-api
     #   dtool-lookup-client
-async-timeout==3.0.1
+async-timeout==4.0.2
     # via aiohttp
-attrs==21.2.0
+attrs==21.4.0
     # via aiohttp
-boto3==1.18.42
+boto3==1.21.22
     # via dtool-s3
-botocore==1.21.42
+botocore==1.24.22
     # via
     #   boto3
     #   s3transfer
-certifi==2021.5.30
+certifi==2021.10.8
     # via requests
-chardet==4.0.0
-    # via aiohttp
-charset-normalizer==2.0.5
-    # via requests
-click==8.0.1
+charset-normalizer==2.0.12
+    # via
+    #   aiohttp
+    #   requests
+click==8.0.4
     # via
     #   click-plugins
     #   dtool-annotation
@@ -40,7 +42,7 @@ click==8.0.1
     #   dtool-tag
 click-plugins==1.1.1
     # via dtool-cli
-dtool==3.26.1
+dtool==3.26.2
     # via -r requirements.in
 dtool-annotation==0.1.1
     # via dtool
@@ -73,7 +75,7 @@ dtool-lookup-client @ git+https://github.com/IMTEK-Simulation/dtool-lookup-clien
     # via -r requirements.in
 dtool-overlay==0.3.1
     # via dtool
-dtool-s3==0.14.0
+dtool-s3==0.14.1
     # via -r requirements.in
 dtool-smb==0.1.0
     # via -r requirements.in
@@ -83,7 +85,7 @@ dtool-symlink==0.3.1
     #   dtool-create
 dtool-tag==0.1.1
     # via dtool
-dtoolcore==3.18.0
+dtoolcore==3.18.2
     # via
     #   dtool
     #   dtool-annotation
@@ -99,30 +101,38 @@ dtoolcore==3.18.0
     #   dtool-smb
     #   dtool-symlink
     #   dtool-tag
-idna==3.2
+frozenlist==1.3.0
+    # via
+    #   aiohttp
+    #   aiosignal
+idna==3.3
     # via
     #   requests
     #   yarl
-jinja2==3.0.1
+jinja2==3.0.3
     # via dtool-info
-jmespath==0.10.0
+jmespath==1.0.0
     # via
     #   boto3
     #   botocore
-markupsafe==2.0.1
+markupsafe==2.1.1
     # via jinja2
-multidict==5.1.0
+multidict==6.0.2
     # via
     #   aiohttp
     #   yarl
+packaging==21.3
+    # via dtool-s3
 parse==1.19.0
     # via dtool-overlay
 pyasn1==0.4.8
     # via pysmb
-pygments==2.10.0
+pygments==2.11.2
     # via
     #   dtool-info
     #   dtool-lookup-client
+pyparsing==3.0.7
+    # via packaging
 pysmb==1.2.7
     # via dtool-smb
 python-dateutil==2.8.2
@@ -131,21 +141,21 @@ pyyaml==6.0
     # via
     #   -r requirements.in
     #   dtool-lookup-api
-requests==2.26.0
+requests==2.27.1
     # via
     #   dtool-http
     #   dtool-lookup-client
-ruamel.yaml==0.17.16
+ruamel-yaml==0.17.21
     # via dtool-create
-s3transfer==0.5.0
+ruamel-yaml-clib==0.2.6
+    # via ruamel-yaml
+s3transfer==0.5.2
     # via boto3
 six==1.16.0
     # via python-dateutil
-typing-extensions==3.10.0.2
-    # via aiohttp
-urllib3==1.26.6
+urllib3==1.26.9
     # via
     #   botocore
     #   requests
-yarl==1.6.3
+yarl==1.7.2
     # via aiohttp
