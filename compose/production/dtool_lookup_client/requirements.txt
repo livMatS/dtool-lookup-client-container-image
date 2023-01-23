@@ -52,6 +52,7 @@ dtool-cli==0.7.1
     #   dtool-annotation
     #   dtool-create
     #   dtool-info
+    #   dtool-lookup-client
     #   dtool-overlay
     #   dtool-s3
     #   dtool-tag
@@ -115,7 +116,7 @@ jmespath==1.0.0
     # via
     #   boto3
     #   botocore
-markupsafe==2.0.1
+markupsafe==2.1.2
     # via
     #   -r requirements.in
     #   jinja2
@@ -149,8 +150,6 @@ requests==2.27.1
     #   dtool-lookup-client
 ruamel-yaml==0.17.21
     # via dtool-create
-ruamel-yaml-clib==0.2.6
-    # via ruamel-yaml
 s3transfer==0.5.2
     # via boto3
 six==1.16.0
