@@ -3,7 +3,7 @@ name: dserver-client-container-image-build-and-test
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
