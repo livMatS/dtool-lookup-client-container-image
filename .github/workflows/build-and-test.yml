@@ -1,4 +1,4 @@
-name: dtool-lookup-client-container-image-build-and-test
+name: dserver-client-container-image-build-and-test
 
 on:
   push:
@@ -47,6 +47,6 @@ jobs:
   build-and-test:
     uses: jotelha/dtool-framework-workflows/.github/workflows/dtool-lookup-framewok-generic-container-image-build-and-test.yml@master
     with:
-      image: jotelha/dtool-lookup-client
+      image: jotelha/dserver-client
       service: dtool_lookup_clinet
       docker_file: ./compose/production/dtool_lookup_client/Dockerfile
