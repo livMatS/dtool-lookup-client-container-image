@@ -68,7 +68,7 @@ dtool-http==0.5.1
     #   dtool-create
 dtool-info==0.16.2
     # via dtool
-dtool-lookup-api==0.6.0
+dtool-lookup-api==0.7.0
     # via
     #   -r requirements.in
     #   dtool-lookup-client
@@ -150,6 +150,8 @@ requests==2.27.1
     #   dtool-lookup-client
 ruamel-yaml==0.17.21
     # via dtool-create
+ruamel-yaml-clib==0.2.8
+    # via ruamel-yaml
 s3transfer==0.5.2
     # via boto3
 six==1.16.0
