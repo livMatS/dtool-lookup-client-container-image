@@ -10,6 +10,7 @@ RUN apt-get --yes update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY compose/production/dserver_client/requirements.txt /requirements.txt
+RUN pip install --no-cache-dir setuptools_scm
 RUN pip install --no-cache-dir -r /requirements.txt
 
 ENTRYPOINT ["/usr/local/bin/dtool"]
