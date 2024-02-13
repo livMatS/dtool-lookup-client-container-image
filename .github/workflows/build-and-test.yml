@@ -24,7 +24,7 @@ jobs:
       - name: Install pip-tools and pipdeptree
         run: |
           pip install --upgrade pip
-          pip install wheel
+          pip install wheel setuptools_scm
           pip install pip-tools
           pip install pipdeptree
           
