@@ -12,7 +12,7 @@ on:
 
 jobs:
   publish:
-    uses: livMatS/dtool-framework-workflows/.github/workflows/dtool-lookup-framewok-generic-container-image-publication.yml@main
+    uses: livMatS/dtool-framework-workflows/.github/workflows/dtool-lookup-framework-generic-container-image-publication.yml@main
     with:
       image: jotelha/dserver-client
       docker_file: ./compose/production/dserver_client/Dockerfile

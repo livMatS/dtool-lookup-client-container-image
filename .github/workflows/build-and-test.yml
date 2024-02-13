@@ -45,7 +45,7 @@ jobs:
           pipdeptree | tee pipdeptree.upgraded
 
   build-and-test:
-    uses: livMatS/dtool-framework-workflows/.github/workflows/dserver-framewok-generic-container-image-build-and-test.yml@main
+    uses: livMatS/dtool-framework-workflows/.github/workflows/dtool-lookup-framework-generic-container-image-build-and-test.yml@main
     with:
       image: jotelha/dserver-client
       service: dserver_client
