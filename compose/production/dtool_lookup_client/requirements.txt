@@ -140,7 +140,7 @@ pysmb==1.2.7
     # via dtool-smb
 python-dateutil==2.8.2
     # via botocore
-pyyaml==6.0
+pyyaml==6.0.1
     # via
     #   -r requirements.in
     #   dtool-lookup-api
@@ -150,6 +150,8 @@ requests==2.27.1
     #   dtool-lookup-client
 ruamel-yaml==0.17.21
     # via dtool-create
+ruamel-yaml-clib==0.2.8
+    # via ruamel-yaml
 s3transfer==0.5.2
     # via boto3
 six==1.16.0
