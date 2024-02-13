@@ -1,7 +1,7 @@
 PyYAML
 dtool
-dtool-lookup-api 
 dtool-s3
 dtool-smb
-git+https://github.com/IMTEK-Simulation/dtool-lookup-client@master#egg=dtool-lookup-client
+git+https://github.com/livMatS/dserver-api@main#egg=dserver-api
+git+https://github.com/livMatS/dserver-client@main#egg=dserver-client
 markupsafe==2.0.1

@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.7', '3.8', '3.9', '3.10']
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
     name: Python ${{ matrix.python-version }} sample
     steps:
       - name: Check out
@@ -30,7 +30,7 @@ jobs:
           
       - name: Requirements inspection and upgrade
         run: |
-          cd compose/production/dtool_lookup_client
+          cd compose/production/dserver_client
           echo "### Initial pip install -r requirements.txt ###"
           pip install -r requirements.txt
           echo "### Initial pipdeptree ###"
@@ -45,8 +45,8 @@ jobs:
           pipdeptree | tee pipdeptree.upgraded
 
   build-and-test:
-    uses: jotelha/dtool-framework-workflows/.github/workflows/dtool-lookup-framewok-generic-container-image-build-and-test.yml@master
+    uses: livMatS/dtool-framework-workflows/.github/workflows/dserver-framewok-generic-container-image-build-and-test.yml@main
     with:
       image: jotelha/dserver-client
-      service: dtool_lookup_clinet
-      docker_file: ./compose/production/dtool_lookup_client/Dockerfile
+      service: dserver_client
+      docker_file: ./compose/production/dserver_client/Dockerfile

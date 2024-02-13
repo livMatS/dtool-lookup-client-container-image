@@ -7,12 +7,15 @@ on:
     tags:
       - 'v*'
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
   publish:
-    uses: jotelha/dtool-framework-workflows/.github/workflows/dtool-lookup-framewok-generic-container-image-publication.yml@master
+    uses: livMatS/dtool-framework-workflows/.github/workflows/dtool-lookup-framewok-generic-container-image-publication.yml@main
     with:
       image: jotelha/dserver-client
-      docker_file: ./compose/production/dtool_lookup_client/Dockerfile
+      docker_file: ./compose/production/dserver_client/Dockerfile
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}

@@ -10,12 +10,12 @@ updates:
 
   - package-ecosystem: "docker"
     # Look for a `Dockerfile` in this directory
-    directory: "/compose/production/dtool_lookup_client"
+    directory: "/compose/production/dserver_client"
     schedule:
       interval: "weekly"
 
   - package-ecosystem: "pip"
     # Look for `requirements.txt` in this directory
-    directory: "/compose/production/dtool_lookup_client"
+    directory: "/compose/production/dserver_client"
     schedule:
       interval: "weekly"
