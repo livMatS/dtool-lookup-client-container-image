@@ -1,0 +1,8 @@
+PyYAML
+dtool
+dtool-s3
+dtool-smb
+dtool-lookup-api
+git+https://github.com/livMatS/dserver-api@main#egg=dtool-lookup-api
+git+https://github.com/jic-dtool/dtool-lookup-client@main#egg=dtool-lookup-client
+markupsafe==2.0.1

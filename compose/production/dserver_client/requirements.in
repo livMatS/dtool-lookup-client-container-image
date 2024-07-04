@@ -1,7 +1,0 @@
-PyYAML
-dtool
-dtool-s3
-dtool-smb
-git+https://github.com/livMatS/dserver-api@main#egg=dserver-api
-git+https://github.com/livMatS/dserver-client@main#egg=dserver-client
-markupsafe==2.0.1
