@@ -30,7 +30,7 @@ jobs:
           
       - name: Requirements inspection and upgrade
         run: |
-          cd compose/production/dserver_client
+          cd compose/production/dtool
           echo "### Initial pip install -r requirements.txt ###"
           pip install -r requirements.txt
           echo "### Initial pipdeptree ###"
@@ -47,6 +47,6 @@ jobs:
   build-and-test:
     uses: livMatS/dtool-framework-workflows/.github/workflows/dtool-lookup-framework-generic-container-image-build-and-test.yml@main
     with:
-      image: jotelha/dserver-client
+      image: jotelha/dtool
       service: dserver_client
-      docker_file: ./compose/production/dserver_client/Dockerfile
+      docker_file: ./compose/production/dtool/Dockerfile
